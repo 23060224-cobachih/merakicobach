@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meraki - Bakery & Snacks</title>
-    <link href="https://googleapis.com" rel="stylesheet">
     
     <style>
         body, html {
@@ -15,7 +14,6 @@
             scroll-behavior: smooth;
         }
 
-        /* TÍTULOS: ADD8E6 (Azul claro) */
         h1, h2, h3 {
             font-family: "Brush Script MT", "Lucida Handwriting", cursive;
             color: #ADD8E6; 
@@ -24,7 +22,7 @@
             margin: 0;
         }
 
-        /* PRIMERA PANTALLA: LOGO CENTRADO SOBRE BLANCO */
+        /* LOGO PRINCIPAL */
         .hero-spacer {
             height: 100vh;
             position: relative;
@@ -36,7 +34,6 @@
             background-color: #FFFFFF;
         }
 
-        /* SEGUNDA SECCIÓN: GRIS PIZARRA */
         .content {
             position: relative;
             z-index: 2;
@@ -62,9 +59,9 @@
 
         .grid-snacks {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -75,6 +72,31 @@
             text-align: center;
             border: 1px solid #ADD8E6;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* CÍRCULO CON EL COLOR #afc2e2 */
+        .image-circle {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #afc2e2; 
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* TAMAÑO DE IMÁGENES DENTRO DEL CÍRCULO */
+        .snack-img {
+            width: 90px; 
+            height: 90px;
+            object-fit: contain;
         }
 
         .snack-card:hover {
@@ -92,33 +114,41 @@
             color: #000000;
             font-size: 1.4rem;
             line-height: 1.2;
+            margin-bottom: 25px;
         }
 
-        /* SECCIÓN CONTACTO ACTUALIZADA */
+        /* BOTONES DE ENLACE NUEVOS */
+        .btn-link {
+            background-color: #afc2e2;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #ADD8E6;
+            display: inline-block;
+        }
+
+        .btn-link:hover {
+            background-color: #ADD8E6;
+            transform: scale(1.05);
+        }
+
         .contact-section {
             margin-top: 100px;
             padding: 40px;
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
-        .contact-section p {
-            font-size: 1.7rem;
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 15px;
-        }
-
         .instagram-link {
             color: #ADD8E6;
             text-decoration: none;
             font-family: "Brush Script MT", cursive;
-            font-size: 3.8rem; /* Un poco más grande para resaltar */
+            font-size: 3.8rem;
             transition: all 0.3s;
-        }
-
-        .instagram-link:hover {
-            color: #ffffff;
-            text-shadow: 0 0 15px rgba(173, 216, 230, 0.8);
         }
 
         footer { 
@@ -134,47 +164,50 @@
     <div class="hero-spacer"></div>
 
     <div class="content">
-        
         <h1 class="main-title">Meraki</h1>
-        <h2 class="sub-title">Selección Bakery</h2>
+        <h2 class="sub-title">Nuestra Selección Dulce</h2>
         
         <div class="grid-snacks">
             <div class="snack-card">
-                <h3>Pan Artesanal</h3>
-                <p>Recetas tradicionales Meraki horneadas cada mañana con masa madre.</p>
+                <div class="image-circle">
+                    <img src="Cake.jpg" alt="Cake" class="snack-img">
+                </div>
+                <h3>Cake</h3>
+                <p>Un pastel que puede tener fresas u Oreos. Delicioso bocado con alma.</p>
+                <!-- Botón conectado a Pastel.html -->
+                <a href="Pastel.html" class="btn-link">Ver Pasteles</a>
             </div>
+
             <div class="snack-card">
-                <h3>Cookies Premium</h3>
-                <p>El balance perfecto de texturas con el sello distintivo de nuestra bakery.</p>
+                <div class="image-circle">
+                    <img src="Kpops.jpg" alt="Kpops" class="snack-img">
+                </div>
+                <h3>Kpops</h3>
+                <p>Son deliciosas cake pops, perfectas para un evento.</p>
+                <!-- Botón conectado a Kpop.html -->
+                <a href="Kpop.html" class="btn-link">Ver Kpops</a>
             </div>
+
             <div class="snack-card">
-                <h3>Mix Energético</h3>
-                <p>Frutos seleccionados para acompañar tu día con energía Meraki.</p>
-            </div>
-            <div class="snack-card">
-                <h3>Repostería Fina</h3>
-                <p>Pequeños bocados creados con amor y dedicación en nuestra cocina.</p>
-            </div>
-            <div class="snack-card">
-                <h3>Snacks Salados</h3>
-                <p>Crujientes y frescos, ideales para cualquier momento Meraki.</p>
-            </div>
-            <div class="snack-card">
-                <h3>Ediciones Especiales</h3>
-                <p>Creaciones únicas de temporada que solo Meraki Bakery puede ofrecer.</p>
+                <div class="image-circle">
+                    <img src="Red_cookies.jpg" alt="Red Cookies" class="snack-img">
+                </div>
+                <h3>Red cookies</h3>
+                <p>Nuestras famosas galletas Red Velvet con el toque Meraki.</p>
+                <!-- Botón conectado a Galletas.html -->
+                <a href="Galletas.html" class="btn-link">Ver Galletas</a>
             </div>
         </div>
 
         <div class="contact-section">
-            <p>¿Quieres ver más de nuestro proceso?</p>
-            <!-- NUEVO ENLACE ACTUALIZADO -->
+            <p style="font-size: 1.7rem; font-weight: 600;">¿Quieres ver más de nuestro proceso?</p>
             <a href="https://www.instagram.com/official_merakibakery/" target="_blank" class="instagram-link">
-                Sigue a official_merakibakery en Instagram
+                @official_merakibakery
             </a>
         </div>
 
         <footer>
-            <p>&copy; 2024 &bull; Meraki Bakery &bull; Hecho con alma</p>
+            <p>&copy; 2026 &bull; Meraki Bakery &bull; Hecho con alma</p>
         </footer>
     </div>
 

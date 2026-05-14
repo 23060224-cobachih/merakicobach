@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraki - Detalle de Kpops</title>
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #778899; 
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+            color: #ADD8E6; 
+            font-style: italic;
+            font-weight: normal;
+        }
+
+        /* HEADER SUPERIOR */
+        .header-container {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #FFFFFF; 
+            border-bottom: 4px solid #ADD8E6;
+            position: relative;
+        }
+
+        /* IMAGEN KPOPS SUPERIOR IZQUIERDA (TAMAÑO AUMENTADO) */
+        .header-cake-img {
+            width: 200px; 
+            height: 200px;
+            object-fit: contain;
+            margin-right: 20px;
+        }
+
+        /* BOTÓN VOLVER */
+        .btn-home {
+            background-color: #afc2e2;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            border: 2px solid #ADD8E6;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .btn-home:hover {
+            background-color: #ADD8E6;
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            text-align: right; 
+            max-width: 500px;
+        }
+
+        .product-info h1 {
+            font-size: 5rem;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .product-info p {
+            font-size: 1.6rem;
+            color: #778899;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* SECCIÓN GALERÍA */
+        .gallery-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .grid-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 40px;
+            border: 1px solid #ADD8E6;
+        }
+
+        .img-container {
+            width: 250px; 
+            height: 250px; 
+            background-color: #afc2e2;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .gallery-img {
+            width: 200px; 
+            height: 200px; 
+            object-fit: contain;
+        }
+
+        .gallery-card h3 {
+            font-size: 2.5rem;
+            color: #ADD8E6;
+            margin-bottom: 0;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-container">
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <a href="index.html" class="btn-home">← VOLVER AL MENÚ</a>
+            <img src="Kpops.jpg" alt="Kpops Principal" class="header-cake-img">
+        </div>
+
+        <div class="product-info">
+            <h1>Kpops Meraki</h1>
+            <p>Divertidas paletas de pastel artesanales, decoradas con amor y mucho sabor.</p>
+        </div>
+    </header>
+
+    <main class="gallery-section">
+        <div class="grid-gallery">
+            <div class="gallery-card">
+                <div class="img-container">
+                    <img src="Kpop1.jpg" alt="Kpop 1" class="gallery-img">
+                </div>
+                <h3>Explosión Dulce</h3>
+            </div>
+
+            <div class="gallery-card">
+                <div class="img-container">
+                    <img src="Kpop2.jpg" alt="Kpop 2" class="gallery-img">
+                </div>
+                <h3>Dúo K-Pop</h3>
+            </div>
+
+            <div class="gallery-card">
+                <div class="img-container">
+                    <img src="Kpop3.jpg" alt="Kpop 3" class="gallery-img">
+                </div>
+                <h3>Fiesta K-Pop</h3>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 &bull; Meraki Bakery &bull; Hecho con alma</p>
+    </footer>
+
+</body>
+</html>
